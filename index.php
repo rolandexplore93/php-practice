@@ -40,5 +40,34 @@
         echo ceil(4.1); echo "<br />";   // round a number up to the next integer
         echo floor(4.1); echo "<br />";   // round a number down to an integer
     ?>
+    <div style="width: 300px; background: #ddd; padding: 5px 20px 20px; margin-bottom: 10px;">
+        <h1>Basic calculator in PHP</h1>
+        <form action="index.php" method="get">
+            <input type="number" name="num1" placeholder="Enter a number">
+            <input type="number" name="num2" placeholder="Enter a number">
+            <button type="submit">Add</button>
+        </form>
+    </div>
+    <div style="width: 300px; background: #ddd; padding: 5px 20px 20px;">
+        <h1>Build MadLib Game</h1>
+        <form action="index.php" method="get">
+            <input type="text" name="color" placeholder="Color">
+            <input type="text" name="plural-noun" placeholder="Plural Noun">
+            <input type="text" name="celebrity" placeholder="Celebrity Name">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+
+    Answer: <?php echo $_GET["num1"] + $_GET["num2"]; ?> <br>
+    MadLib:
+    <?php 
+        $color = $_GET["color"];
+        $pluralNoun = $_GET["plural-noun"];
+        $celebrity = $_GET["celebrity"];
+        echo "Roses are $color <br>";
+        echo "$pluralNoun are blue <br>";
+        echo "I love $celebrity <br>"
+    ?>
 </body>
 </html>
