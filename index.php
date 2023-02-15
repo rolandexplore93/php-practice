@@ -40,15 +40,18 @@
         echo ceil(4.1); echo "<br />";   // round a number up to the next integer
         echo floor(4.1); echo "<br />";   // round a number down to an integer
     ?>
-    <div style="width: 300px; background: #ddd; padding: 5px 20px 20px; margin-bottom: 10px;">
+
+    <!-- Basic calculator -->
+    <!-- <div style="width: 300px; background: #ddd; padding: 5px 20px 20px; margin-bottom: 10px;">
         <h1>Basic calculator in PHP</h1>
         <form action="index.php" method="get">
             <input type="number" name="num1" placeholder="Enter a number">
             <input type="number" name="num2" placeholder="Enter a number">
-            <button type="submit">Add</button>
+            <button type="submit">Results</button>
         </form>
-    </div>
-    <div style="width: 300px; background: #ddd; padding: 5px 20px 20px;">
+    </div> -->
+    <!-- MADLIB GAME -->
+    <div style="width: 300px; background: #ddd; padding: 5px 20px 20px; margin-bottom: 10px;">
         <h1>Build MadLib Game</h1>
         <form action="index.php" method="get">
             <input type="text" name="color" placeholder="Color">
@@ -57,17 +60,62 @@
             <button type="submit">Submit</button>
         </form>
     </div>
-
-
-    Answer: <?php echo $_GET["num1"] + $_GET["num2"]; ?> <br>
-    MadLib:
+    <!-- Get CHECKBOX values in PHP -->
+    <div style="width: 300px; background: #ddd; padding: 5px 20px 20px; margin-bottom: 10px;">
+        <h1>Checkbox values in PHP</h1>
+        <form action="index.php" method="post">
+            <p>Select Industry Preference for Investment</p>
+            Technology: <input type="checkbox" name="industry[]" value="technology" >
+            Accounting: <input type="checkbox" name="industry[]" value="accounting" >
+            Energy: <input type="checkbox" name="industry[]" value="energy" >
+            Finance: <input type="checkbox" name="industry[]" value="finance" >
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <!-- ASSOCIATIVE ARRAYS -->
+    <!-- This array uses key-value pair to store data inside a variable -->
+    <div style="width: 300px; background: #ddd; padding: 5px 20px 20px; margin-bottom: 10px;">
+        <h1>Key-Value pair in PHP</h1>
+        <form action="index.php" method="post">
+            <p>Enter your student id to check your grade</p>
+            <input type="text" name="grade">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    
+    <!-- PHP codes -->
     <?php 
+        // Madlib codes
         $color = $_GET["color"];
         $pluralNoun = $_GET["plural-noun"];
         $celebrity = $_GET["celebrity"];
         echo "Roses are $color <br>";
         echo "$pluralNoun are blue <br>";
-        echo "I love $celebrity <br>"
+        echo "I love $celebrity <br>";
+
+        // ARRAYS in PHP
+        $friends = array("Tobi", "Joy", "Frank");
+        $friends[4] = "Roland";
+        echo $friends[2];
+
+        // Checkboxes codes
+        $industry = $_POST["industry"];
+        echo $industry[0];
+        echo $industry[1];
+
+        // Students' grades
+        $grades = array("SID121" => "A+", "SID122" => "A+", "SID120" => "C", "SID125" => "B", "SID123" => "B+");
+        echo $grades["SID122"];
+        echo "HELLO";
+        echo $grades[$_POST["grade"]];
+
+        // Arithmetic
     ?>
+    <!-- Addition: <?php echo $_GET["num1"] + $_GET["num2"]; ?> <br> -->
+    <!-- Subtraction: <?php echo $_GET["num1"] - $_GET["num2"]; ?><br> -->
+    <!-- Multiplication: <?php echo $_GET["num1"] * $_GET["num2"]; ?><br> -->
+    <!-- Division: <?php echo $_GET["num1"] / $_GET["num2"]; ?><br> -->
+    <!-- Remainder: <?php echo $_GET["num1"] % $_GET["num2"]; ?><br> -->
+
 </body>
 </html>
