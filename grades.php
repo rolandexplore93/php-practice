@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+    <?php @include "header.html" ?>
     <form action="grades.php" method="post">
         <h1>Grades and meaning</h1>
         <input type="text" name="grades" placeholder="Enter grades">
@@ -38,5 +39,14 @@
         }
 
     ?>
+    <?php @include "footer.html" ?>
+    <?php 
+        $name = "Roland";
+        $university = "ARU";
+        
+        @include "banner.php"; 
+    
+    ?>
+
 </body>
 </html>
