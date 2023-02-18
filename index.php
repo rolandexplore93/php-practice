@@ -7,49 +7,27 @@
     <title>PHP Codes</title>
 </head>
 <body>
-    <?php 
-        $username = "Ogarolly"; // string type
-        $school = "Anglia Ruskin University";
-        $comment = "ARU is a great University with reputable Alumni";
-        $sid = 2191141;  // number type
-        $isAGrad = false;  // boolean type
-        $cgpa = null;  // null type
-
-        // Read about string functions in PHP
-        echo ("Hello World");
-        echo "<br />";
-        echo "<h2>Summary</h2>";
-        echo "This is $username, a PHP professional from $school";
-
-        // String
-        echo strtolower($comment);echo "<br />";
-        echo strtoupper($school);echo "<br />";
-        echo strlen($comment);echo "<br />";
-        echo str_replace("University", "Howard", $school);echo "<br />";
-        echo $school[0];echo "<br />";
-        echo substr($comment, 8, 5);echo "<br />";
-
-        // PHP Math functions
-        echo abs(-21.47);echo "<br />";
-        echo pow(3, 5);echo "<br />";
-        echo sqrt(81);echo "<br />";
-        echo max(14, 17, 5, 14); echo "<br />"; // Prints the biggest number
-        echo min(17, 3, 14); echo "<br />";// Prints the lowest number
-        echo round(4.6); echo "<br />";
-        echo round(4.2); echo "<br />";
-        echo ceil(4.1); echo "<br />";   // round a number up to the next integer
-        echo floor(4.1); echo "<br />";   // round a number down to an integer
-    ?>
-
     <!-- Basic calculator -->
-    <!-- <div style="width: 300px; background: #ddd; padding: 5px 20px 20px; margin-bottom: 10px;">
+    <div style="width: 350px; background: #ddd; padding: 5px 20px 20px; margin-bottom: 10px;">
         <h1>Basic calculator in PHP</h1>
-        <form action="index.php" method="get">
+        <form action="index.php" method="post">
+            <p> First Number:
+                <input type="number" step="0.0001" name="num1" id="num1">
+            </p>
+            <p>Operator (+, -, *, / or %)
+                <input type="text" name="operator" id="operator">
+            </p>
+            <p> Second Number:
+                <input type="number"step="0.0001" name="num2" id="num2">
+            </p>
+            <button type="submit">Result</button>
+        </form>
+        <!-- <form action="index.php" method="get">
             <input type="number" name="num1" placeholder="Enter a number">
             <input type="number" name="num2" placeholder="Enter a number">
             <button type="submit">Results</button>
-        </form>
-    </div> -->
+        </form> -->
+    </div>
     <!-- MADLIB GAME -->
     <div style="width: 300px; background: #ddd; padding: 5px 20px 20px; margin-bottom: 10px;">
         <h1>Build MadLib Game</h1>
@@ -85,6 +63,72 @@
     
     <!-- PHP codes -->
     <?php 
+        // FUNCTIONS allows you to create reusable codes
+        function sayHi($name, $sid){
+            echo "Hello $name, your SID number is $sid <br>";
+        };
+        // return statement in function: when you call a function, it can also return back a value to you
+        function squareNumber($number){
+            return $number * $number;
+        };
+        // echo squareNumber(4);
+        // sayHi("Roland", 20140225);
+        // sayHi("Jide", 20140445);
+        // sayHi("Francis", 20140478);
+
+        // BASIC CALCULATOR
+        $number1 = $_POST["num1"];
+        $number2 = $_POST["num2"];
+        $operator = $_POST["operator"];
+        // echo $number1;
+        if ($operator == "+"){
+            echo $number1 + $number2;
+        } else if ($operator == "-"){
+            echo $number1 - $number2;
+        } else if ($operator == "*"){
+            echo $number1 * $number2;
+        } else if ($operator == "/"){
+            echo $number1 / $number2;
+        } else if ($operator == "%"){
+            echo $number1 % $number2;
+        } else {
+            echo "Invalid operator <br>";
+        }
+        
+        echo 
+        "Just starting init. Everything will be fine" ;
+        $username = "Ogarolly"; // string type
+        $school = "Anglia Ruskin University";
+        $comment = "ARU is a great University with reputable Alumni";
+        $sid = 2191141;  // number type
+        $isAGrad = false;  // boolean type
+        $cgpa = null;  // null type
+
+        // Read about string functions in PHP
+        echo ("Hello World");
+        echo "<br />";
+        echo "<h2>Summary</h2>";
+        echo "This is $username, a PHP professional from $school";
+
+        // String
+        echo strtolower($comment);echo "<br />";
+        echo strtoupper($school);echo "<br />";
+        echo strlen($comment);echo "<br />";
+        echo str_replace("University", "Howard", $school);echo "<br />";
+        echo $school[0];echo "<br />";
+        echo substr($comment, 8, 5);echo "<br />";
+
+        // PHP Math functions
+        echo abs(-21.47);echo "<br />";
+        echo pow(3, 5);echo "<br />";
+        echo sqrt(81);echo "<br />";
+        echo max(14, 17, 5, 14); echo "<br />"; // Prints the biggest number
+        echo min(17, 3, 14); echo "<br />";// Prints the lowest number
+        echo round(4.6); echo "<br />";
+        echo round(4.2); echo "<br />";
+        echo ceil(4.1); echo "<br />";   // round a number up to the next integer
+        echo floor(4.1); echo "<br />";   // round a number down to an integer
+
         // Madlib codes
         $color = $_GET["color"];
         $pluralNoun = $_GET["plural-noun"];
@@ -96,7 +140,8 @@
         // ARRAYS in PHP
         $friends = array("Tobi", "Joy", "Frank");
         $friends[4] = "Roland";
-        echo $friends[2];
+        // echo $friends[2];
+        print_r($friends);
 
         // Checkboxes codes
         $industry = $_POST["industry"];
@@ -108,6 +153,7 @@
         echo $grades["SID122"];
         echo "HELLO";
         echo $grades[$_POST["grade"]];
+        print_r($grades);
 
         // Arithmetic
     ?>
