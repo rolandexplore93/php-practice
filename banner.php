@@ -1,5 +1,9 @@
+<h2>Hello <?php echo $name; ?></h2>
+<h2>Welcome to <?php echo $university ?></h2>
 <?php 
-    echo "<h5> Welcome $name </h5>";
-    echo "<p>This is $university </p>";
 
+    @include "functions.php"; 
+    echo "$milesCovered \n";
+    
+    sayHi("Vincent");
 ?>
