@@ -12,9 +12,9 @@ class Car {
     var $noOfSeat;
 }
 
-// Create an object for cars
-$car1 = new Car;
-$car2 = new Car;
+// Create an object of the class Car
+$car1 = new Car();
+$car2 = new Car();
 // Initialize the properties/attributes of the car object created
 $car1 -> manufacturer = "BMW";
 $car1 -> year = 2023;
