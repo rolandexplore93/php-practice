@@ -51,5 +51,31 @@ echo $car3 -> manufacturer;
 echo $car4 -> manufacturer;
 echo $car5 -> manufacturer;
 
+class Student {
+    var $name;
+    var $department;
+    var $gpa;
+
+    function __construct($studentName, $studentDept, $studentGpa){
+        $this -> name = $studentName;
+        $this -> department = $studentDept;
+        $this -> gpa = $studentGpa;
+    }
+
+    function hasHonors(){
+        // PHP doesn't return Boolean True or False. Instead, represent True or False with a string
+        if ($this -> gpa >= 3.5) return "true";
+        return "false";
+    }
+}
+
+$student1 = new Student("Roland", "ICT", 4.9);
+$student2 = new Student("Bola", "Computer Science", 4.91);
+$student3 = new Student("Adebisi", "AI", 2.9);
+
+echo $student1 -> hasHonors();
+echo $student2 -> hasHonors();
+echo $student3 -> hasHonors();
+
 
 ?>
