@@ -72,10 +72,12 @@ class Student {
 $student1 = new Student("Roland", "ICT", 4.9);
 $student2 = new Student("Bola", "Computer Science", 4.91);
 $student3 = new Student("Adebisi", "AI", 2.9);
+$student4 = new Student("Johnson", "ICT", 3.99);
 
 echo $student1 -> hasHonors();
 echo $student2 -> hasHonors();
 echo $student3 -> hasHonors();
+echo $student4 -> hasHonors();
 
 
 ?>
