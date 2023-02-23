@@ -47,9 +47,9 @@ $car5 = new Car("Toyota Corolla", 2012, "Wine", 6);
 // echo $car2 -> year;
 // echo $car2 -> color;
 // echo $car2 -> noOfSeat;
-echo $car3 -> manufacturer;
-echo $car4 -> manufacturer;
-echo $car5 -> manufacturer;
+// echo $car3 -> manufacturer;
+// echo $car4 -> manufacturer;
+// echo $car5 -> manufacturer;
 
 class Student {
     var $name;
@@ -74,10 +74,28 @@ $student2 = new Student("Bola", "Computer Science", 4.91);
 $student3 = new Student("Adebisi", "AI", 2.9);
 $student4 = new Student("Johnson", "ICT", 3.99);
 
-echo $student1 -> hasHonors();
-echo $student2 -> hasHonors();
-echo $student3 -> hasHonors();
-echo $student4 -> hasHonors();
+// echo $student1 -> hasHonors();
+// echo $student2 -> hasHonors();
+// echo $student3 -> hasHonors();
+// echo $student4 -> hasHonors();
+
+// GETTER AND SETTER IN PHP
+/* Getter and Setter are special functions created inside a class
+to control the level of access that people have on the attributes of a class
+*/
+class Movie {
+    public $title;
+    private $rating;
+
+    function __construct($title, $rating){
+        $this -> title = $title;
+        $this -> rating = $rating;
+    }
+}
+
+$avengers = new Movie("Avengers", "PG-13");
+// $avengers -> rating = "Doough";
+echo $avengers -> rating;
 
 
 ?>
