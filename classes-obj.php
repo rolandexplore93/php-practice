@@ -84,6 +84,10 @@ $student4 = new Student("Johnson", "ICT", 3.99);
 to control the level of access that people have on the attributes of a class
 */
 class Movie {
+    /* Visibility modifiers in PHP are keywords that tell PHP what code is able to access and use
+    different attributes in your program.
+    Public $title implies that 'title' is visible to any other code in the PHP program. Also, it is opened to the public and can be modified.
+    Private $rating implies that 'rating' is not visible to another codes or public. So, it is not modifiable. */
     public $title;
     private $rating;
 
