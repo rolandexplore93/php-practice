@@ -93,13 +93,29 @@ class Movie {
 
     function __construct($title, $rating){
         $this -> title = $title;
-        $this -> rating = $rating;
+        $this -> setRating($rating);
+    }
+
+    // Getter
+    function getRating(){
+        return $this -> rating;
+    }
+
+    // Setter
+    function setRating($rating){
+        // $this -> rating = $rating;
+        if ($rating == "G" || $rating == "PG" || $rating == "PG-13" || $rating == "R" || $rating == "NR"){
+            $this -> rating = $rating;
+        } else {
+            $this -> rating = "NR";
+        }
+
     }
 }
 
 $avengers = new Movie("Avengers", "PG-13");
-// $avengers -> rating = "Doough";
-echo $avengers -> rating;
+// $avengers -> setRating("New Channel");
+echo $avengers -> getRating();
 
 
 ?>
