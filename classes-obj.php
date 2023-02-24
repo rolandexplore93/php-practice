@@ -117,5 +117,49 @@ $avengers = new Movie("Avengers", "PG-13");
 // $avengers -> setRating("New Channel");
 echo $avengers -> getRating();
 
+// INHERITANCE
+class Fan {
+    // methods
+    function watchUcl(){
+        echo "Watch all Champions League Matches this week.";
+    }
+
+    function watchEuropa(){
+        echo "Watch all Europa league matches this week.";
+    }
+
+    function watchEpl(){
+        echo "Watch EPL matches this weekend";
+    }
+}
+
+class BarcaFan extends Fan {
+    // Define new methods not in parant Fan Class but you want BarcaFan to execute
+    function laLigaUcl(){
+        echo "Watch all La Liga Matches this week.";
+    }
+}
+
+class NapoliFan extends Fan {
+    // Define new methods not in parant Fan Class but you want BarcaFan to execute
+    function seriaAUcl(){
+        echo "Watch all seria A Matches this week.";
+    }
+}
+
+$manUnitedFan = new Fan();
+$arsenalFan = new Fan();
+$barcaFan = new BarcaFan();
+$napoliFan = new NapoliFan();
+
+echo "<br>";
+echo $manUnitedFan -> watchUcl();
+echo "<br>";
+echo $barcaFan -> watchUcl();
+echo "<br>";
+echo $barcaFan -> laLigaUcl();
+echo "<br>";
+echo $napoliFan -> seriaAUcl();
+
 
 ?>
