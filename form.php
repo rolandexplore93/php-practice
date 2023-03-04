@@ -15,7 +15,6 @@
         <label for="">Password:</label><input type="password" name="password" id=""><br>
         <label for="">Confirm Password:</label><input type="password" name="confirmPassword" id=""><br>
         <button type="submit">Submit</button>
-        <!-- <input type="submit" value="Send"> -->
     </form>
 </body>
 </html>
