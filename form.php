@@ -7,7 +7,7 @@
     <title>Form</title>
 </head>
 <body>
-    <form action="process-form.php" method="post">
+    <form action="constant.php" method="post">
         <h3>Sign up information</h3>
         <label for="">Firstname:</label><input type="text" name="firstname" id=""><br>
         <label for="">Lastname:</label><input type="text" name="lastname" id=""><br>
