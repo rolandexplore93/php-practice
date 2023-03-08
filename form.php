@@ -16,6 +16,5 @@
         <label for="">Confirm Password:</label><input type="password" name="confirmPassword" id=""><br>
         <button type="submit">Submit</button>
     </form>
-    <a href="output.php">See all users</a>
 </body>
 </html>
