@@ -35,4 +35,5 @@
 
     // Close connection everytime you end a script for security reason
     mysqli_close($dbconnection);
+    include('links.php');
 ?>

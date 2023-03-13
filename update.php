@@ -1,4 +1,4 @@
-<?php 
+<?php
 
     $dbconnection = new mysqli("localhost", "root", "", "testing");
     if ($dbconnection -> connect_error){
@@ -24,8 +24,8 @@
             $lastname = $row["lastname"];
             $email = $row["email"];
             $password = $row["password"];
-            // echo $row['firstname'] ." ".$row['lastname'] ." ".$row['email'] ." ".$row['password'];
-            echo "<tr>
+            echo 
+            "<tr>
                 <td width=\"5%\" align=center><a href=\"edit.php?ids=$id&firstnames=$firstname&lastnames=$lastname&emails=$email&passwords=$password\">$id</a></td>
                 <td>$firstname</td>
                 <td>$lastname</td>
@@ -33,10 +33,10 @@
                 <td>$password</td>
             </tr>";
         };
-
     echo "</table>";
 
 
 
     mysqli_close($dbconnection);
+    include('links.php');
 ?>

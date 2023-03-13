@@ -16,5 +16,7 @@
         <label for="">Confirm Password:</label><input type="password" name="confirmPassword" id=""><br>
         <button type="submit">Submit</button>
     </form>
+    
+    <?php include('links.php'); ?>
 </body>
 </html>
