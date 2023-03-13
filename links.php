@@ -9,8 +9,6 @@
 <body>
     <p><a href="home.php">Home</a></p>
     <p><a href="form.php">Register</a></p>
-    <p><a href="output.php">View all Users</a></p>
-    <p><a href="update.php">Edit User</a></p>
-    <p><a href="delete.php">Delete User</a></p>
+    <p><a href="update.php">All Users</a></p>
 </body>
 </html>

@@ -31,6 +31,8 @@
                 <td>$lastname</td>
                 <td>$email</td>
                 <td>$password</td>
+                <td width=\"2%\"><a href=\"delete.php?ids=$id&firstnames=$firstname&lastnames=$lastname&emails=$email&passwords=$password\"><button type='submit'>Delete</button></a></td>
+                
             </tr>";
         };
     echo "</table>";
