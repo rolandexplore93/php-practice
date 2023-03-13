@@ -7,8 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <p><a href="home.php">Home</a></p>
-    <p><a href="form.php">Register</a></p>
-    <p><a href="update.php">All Users</a></p>
+    <center>
+        <p><a href="home.php">Home</a></p>
+        <p><a href="form.php">Register</a></p>
+        <p><a href="update.php">All Users</a></p>
+        <p><a href="search.php">Search</a></p>
+    </center>
+   
 </body>
 </html>
